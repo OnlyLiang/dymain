@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/879c10e988.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>隼思科技</title>
+  </head>
+  <body>
+    <header
+      class="dwNavbar container-fluid position-fixed px-0 pt-md-1 pb-1 pb-md-2"
+    >
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <h1 class="mb-0">
+              <a href="/home.html">
+                <img
+                  class="dwNavbar__logo"
+                  src="images/dw__logo.svg"
+                  alt="隼思科技Dymain"
+                />
+              </a>
+            </h1>
+          </div>
+          <!-- desktop -->
+          <div class="col d-none d-md-flex justify-content-between">
+            <a class="font__size__14 dwNavbar__link" href="/works.html"
+              >案例分析</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/articles"
+              >隼司選讀</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/questions.html"
+              >常見問題</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+          <!-- mobile -->
+          <div class="col d-md-none text-right">
+            <img
+              class="dwNavbar__menu"
+              onclick="toggleMenu()"
+              src="images/dw__icon__menu3.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 pl-5 dwNavbar__mobile d-none">
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link my-4 ml-2"
+              href="/works.html"
+              >案例分析</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/articles"
+              >隼司選讀</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/questions.html"
+              >常見問題</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid dwHero__image">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="container dwHero d-flex flex-column justify-content-center align-items-center align-items-md-start"
+      >
+        <h3
+          class="font__size__24 font-sm__size__38 font__weight__medium color__primary text-center text-md-left mb-3 mb-md-4"
+        >
+          我們致力於將您的想法<br />
+          以專業技術實現
+        </h3>
+        <p
+          class="mb-5 d-none d-md-block color__secondary text-center text-md-left letter__spacing"
+        >
+          我們專精於app以及網站的開發，同時也使用我們<br />
+          的案例經驗，幫助您優化想法，而不只是單純的coding
+        </p>
+        <p
+          class="mb-5 d-md-none color__secondary text-center text-md-left letter__spacing"
+        >
+          我們專精於app以及網站的開發，同時也使用我們的案例經驗，幫助您優化想法。
+        </p>
+        <button class="btn__primary mt-5">
+          立即諮詢
+        </button>
+      </div>
+    </div>
+    <div class="container pb-4 pb-md-5">
+      <h3
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 pt-5 mb-0"
+      >
+        <span class="title__decoration">服務項目</span>
+      </h3>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="row justify-content-md-between mt-4 mt-md-5 pt-md-5"
+      >
+        <div class="col-12 col-md-5 text-center text-md-left">
+          <img class="img-fluid" src="images/dw__shop.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0">
+          <h2
+            class="color__primary font__size__20 font-md__size__24 font__weight__medium mb-2 mb-md-4"
+          >
+            智慧開店平台
+          </h2>
+          <p class="color__primary letter__spacing mb-0">
+            一分鐘完成註冊，一個下午做好網站設計，一個星期就能正式對外營運！以大幅增進「成交訂單」為目標的電商架站平台，採用
+            RWD
+            響應式網頁設計，聰明適應於不同裝置；提供多款設計版型，支援從商品上架、金物流串接到促銷活動設定等所有功能，協助你輕鬆在短時間內打造理想中的風格店面。
+          </p>
+          <a
+            class="d-flex btn__secondary mt-4 mt-md-5 pt-md-3 d-flex align-items-center color__primary font__weight__medium"
+            href=""
+          >
+            <div class="btn__secondary__line mr-3"></div>
+            <div>
+              了解更多
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="row justify-content-md-between my-4 my-md-5 py-5"
+      >
+        <div class="col-12 col-md-5 text-center text-md-right order-md-last">
+          <img class="img-fluid" src="images/dw__work.svg" alt="" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0">
+          <h2
+            class="color__primary font__size__20 font-md__size__24 font__weight__medium mb-2 mb-md-4"
+          >
+            網站 · APP 設計
+          </h2>
+          <p class="color__primary letter__spacing mb-0">
+            提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程式開發，伺服器建置與維護，都是累積10年以上的客製化經驗，所以請放心將網站交給我們。
+          </p>
+          <a
+            class="d-flex btn__secondary mt-4 mt-md-5 d-flex align-items-center color__primary font__weight__medium"
+            href=""
+          >
+            <div class="btn__secondary__line mr-3"></div>
+            <div>
+              案例分析
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg__gray py-4 py-md-5">
+      <h3
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 mb-5 pb-md-4"
+      >
+        <span class="title__decoration">服務流程</span>
+      </h3>
+      <div class="container mb-5">
+        <div class="row justify-content-lg-between">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            class="col-12 col-sm-4 col-lg-2 text-center"
+          >
+            <img
+              class="dwProcess__icon mb-4"
+              src="images/dw__process__communication.svg"
+              alt=""
+            />
+            <h2 class="font__size__20 font__weight__medium mb-0">1.溝通理念</h2>
+            <p class="text-justify mt-2 mt-sm-4 mb-0 letter__spacing">
+              提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-once="true"
+            class="col-12 col-sm-4 col-lg-2 text-center mt-5 mt-sm-0"
+          >
+            <img
+              class="dwProcess__icon mb-4"
+              src="images/dw__process__research.svg"
+              alt=""
+            />
+            <h2 class="font__size__20 font__weight__medium mb-0">
+              2.使用者研究
+            </h2>
+            <p class="text-justify mt-2 mt-sm-4 mb-0 letter__spacing">
+              提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-once="true"
+            class="col-12 col-sm-4 col-lg-2 text-center mt-5 mt-sm-0"
+          >
+            <img
+              class="dwProcess__icon mb-4"
+              src="images/dw__process__design.svg"
+              alt=""
+            />
+            <h2 class="font__size__20 font__weight__medium mb-0">3.進行設計</h2>
+            <p class="text-justify mt-2 mt-sm-4 mb-0 letter__spacing">
+              提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-once="true"
+            class="col-12 col-sm-4 col-lg-2 text-center mt-5 mt-lg-0"
+          >
+            <img
+              class="dwProcess__icon mb-4"
+              src="images/dw__process__coding.svg"
+              alt=""
+            />
+            <h2 class="font__size__20 font__weight__medium mb-0">4.進行開發</h2>
+            <p class="text-justify mt-2 mt-sm-4 mb-0 letter__spacing">
+              提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+            data-aos-once="true"
+            class="col-12 col-sm-4 col-lg-2 text-center mt-5 mt-lg-0"
+          >
+            <img
+              class="dwProcess__icon mb-4"
+              src="images/dw__process__finish.svg"
+              alt=""
+            />
+            <h2 class="font__size__20 font__weight__medium mb-0">5.完成上線</h2>
+            <p class="text-justify mt-2 mt-sm-4 mb-0 letter__spacing">
+              提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-5 pb-5">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="row justify-content-md-between mt-5 mb-5"
+      >
+        <div class="col-md-8">
+          <img class="img-fluid" src="images/dw__wawo__cover.svg" alt="" />
+        </div>
+        <div
+          class="col-md-3 d-md-flex flex-md-column justify-content-md-center"
+        >
+          <h3
+            class="color__primary font__size__28 font-md__size__32 font__weight__medium mt-2 mt-md-0 mb-2 mb-md-4"
+          >
+            <span class="title__decoration">精選案例</span>
+          </h3>
+          <p class="color__primary letter__spacing mb-0">
+            提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程式開發，伺服器建置與維護
+          </p>
+          <a
+            class="d-flex btn__secondary mt-4 mt-md-5 pt-md-3 d-flex align-items-center color__primary font__weight__medium"
+            href=""
+          >
+            <div class="btn__secondary__line mr-3"></div>
+            <div>
+              了解更多
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg__gray py-4 py-md-5">
+      <h3
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 mb-5 pb-md-4"
+      >
+        <span class="title__decoration">隼思選讀</span>
+      </h3>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="container mb-5"
+      >
+        <div class="row justify-content-md-between">
+          <div class="col-12 col-md-6 order-md-last">
+            <div
+              class="dwBlog__image color__white d-flex flex-column justify-content-between p-3 p-md-4"
+            >
+              <div class="d-flex align-items-center">
+                <div class="dw__blog__tag--first mr-2 pr-1"></div>
+                <div class="color__white font__size__14 color__white">
+                  專案合作
+                </div>
+              </div>
+              <div>
+                <h3 class="font__size__20 font-md__size__24 mb-0">
+                  文章標題
+                </h3>
+                <p class="font__size__14 letter__spacing">
+                  加入 Fourdesirie
+                  之前，前公司做過的產品偏向一般的工具類產品，像是....
+                </p>
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="images/dw__icon__eye--white.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 mt-4 mt-md-2">
+            <article class="d-flex align-items-start">
+              <div class="mr-4">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <h3
+                class="font__size__16 font-md__size__18 font__weight__medium color__primary mb-0"
+              >
+                文章標題文章標題
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 color__secondary font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="images/dw__icon__eye.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </h3>
+              <div class="d-flex align-items-center ml-auto">
+                <div class="dw__blog__tag mr-2 pr-1"></div>
+                <div class="font__size__14">
+                  網站建置
+                </div>
+              </div>
+            </article>
+            <article class="d-flex align-items-start mt-3 mt-md-4">
+              <div class="mr-4">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <h3
+                class="font__size__16 font-md__size__18 font__weight__medium color__primary mb-0"
+              >
+                文章標題文章標題
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 color__secondary font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="images/dw__icon__eye.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </h3>
+              <div class="d-flex align-items-center ml-auto">
+                <div class="dw__blog__tag mr-2 pr-1"></div>
+                <div class="font__size__14">
+                  網站建置
+                </div>
+              </div>
+            </article>
+            <article class="d-flex align-items-start mt-3 mt-md-4">
+              <div class="mr-4">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <h3
+                class="font__size__16 font-md__size__18 font__weight__medium color__primary mb-0"
+              >
+                文章標題文章標題
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 color__secondary font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="images/dw__icon__eye.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </h3>
+              <div class="d-flex align-items-center ml-auto">
+                <div class="dw__blog__tag mr-2 pr-1"></div>
+                <div class="font__size__14">
+                  網站建置
+                </div>
+              </div>
+            </article>
+            <a
+              class="d-flex btn__secondary mt-4 mt-md-5 pt-md-3 d-flex align-items-center color__primary font__weight__medium"
+              href=""
+            >
+              <div class="btn__secondary__line mr-3"></div>
+              <div>
+                更多文章
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+      class="container pt-5 pb-5"
+    >
+      <h3
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 mb-4"
+      >
+        <span class="title__decoration">想要和我們聊聊？</span>
+      </h3>
+      <p class="color__secondary text-center mb-5 pb-4 letter__spacing">
+        帶著您的想法與目標，我們將協助您從模糊的輪廓走向清晰完整、趨近出色理想。
+      </p>
+      <button class="btn__primary d-block mx-auto text-center mb-5">
+        立即諮詢
+      </button>
+    </div>
+
+    <footer class="container">
+      <div
+        class="row justify-content-between align-items-start dwFooter py-4 py-md-5"
+      >
+        <div class="col-12 col-lg-3 mb-3 mb-sm-4">
+          <img class="dwNavbar__logo" src="images/dw__logo.svg" alt="" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">服務項目</h3>
+          <div class="row justify-content-between">
+            <a
+              href="/works.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pr-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >案例分析</a
+            >
+            <a
+              href="/articles"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >隼思選讀</a
+            >
+            <a
+              href="/questions.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3"
+              >常見問題</a
+            >
+            <a
+              href="/contact.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pl-sm-0 px-lg-3"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">聯絡資訊</h3>
+          <div class="row">
+            <p class="col-12 col-lg-6 order-lg-1 font__size__14 color__secondary mb-lg-4">
+              02-2222-1929
+            </p>
+            <p class="col-12 col-lg-6 order-lg-3 font__size__14 color__secondary">
+              0910-338-721
+            </p>
+            <p class="col-12 col-lg-6 order-lg-2 font__size__14 color__secondary mb-lg-4 px-lg-0">
+              david.weng.android@gmail.com
+            </p>
+            <p class="col-12 col-lg-6 order-lg-4 font__size__14 color__secondary mb-0 px-lg-0">
+              台北市松山區敦化北路153-10號
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3
+        class="font__size__14 font__weight__regular color__secondary text-center my-4 my-md-5"
+      >
+        © Copyright 2019. 隼思科技有限公司 Inc.
+      </h3>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

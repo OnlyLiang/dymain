@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>隼司科技 | 隼思選讀</title>
+    <style>
+      .dwArticle__search {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        transition: 0.2s;
+      }
+
+      .dwArticle__search::placeholder {
+        color: #b3b3b3;
+      }
+
+      .dwArticle__search:focus {
+        color: #333333;
+        border-color: #26b0e2;
+        outline: none;
+      }
+
+      .dwArticle__search__icon {
+        height: 16px;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .dwArticle__popular__wrap {
+        padding-bottom: 75%;
+        width: 100%;
+        position: relative;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__popular__wrap {
+          padding-bottom: 45%;
+        }
+      }
+
+      .dwArticle__popular__wrap__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+
+      .carousel,
+      .carousel-inner {
+        border-radius: 15px;
+      }
+
+      .dwArticle__popular__indicator {
+        position: absolute;
+        bottom: -44px;
+        z-index: 0;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__popular__indicator {
+          bottom: -60px;
+        }
+      }
+
+      .dwArticle__popular__indicator__item {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50% !important;
+        background: #f3f3f3 !important;
+        border: none !important;
+        opacity: 1 !important;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__popular__indicator__item {
+          width: 12px !important;
+          height: 12px !important;
+        }
+      }
+
+      .dwArticle__popular__text {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+      }
+
+      .dwArticle__popular__tag {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: white;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__popular__tag {
+          width: 9px;
+          height: 9px;
+        }
+      }
+
+      .carousel-indicators .active {
+        background: #26b0e2 !important;
+        width: 12px !important;
+        height: 12px !important;
+      }
+
+      @media (min-width: 768px) {
+        .carousel-indicators .active {
+          width: 14px !important;
+          height: 14px !important;
+        }
+      }
+
+      .dwArticle__normal__wrap {
+        padding-bottom: 56.25%;
+        width: 100%;
+        position: relative;
+        border-radius: 15px;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__normal__wrap {
+          padding-bottom: 75%;
+        }
+      }
+
+      .dwArticle__normal__wrap__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 15px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .dwArticle__normal__tag {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #26b0e2;
+      }
+
+      @media (min-width: 768px) {
+        .dwArticle__normal__tag {
+          width: 9px;
+          height: 9px;
+        }
+      }
+
+      .dwArticle__type {
+        overflow: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+
+      .dwArticle__type::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .page-link {
+        border: none;
+        color: #666666;
+      }
+
+      .page-link:hover {
+        color: #333333;
+        background: none;
+      }
+
+      .page-link--active {
+        color: #26b0e2;
+      }
+
+      .page-link--active:hover {
+        color: #26b0e2;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="dwNavbar container-fluid position-fixed px-0 pt-md-1 pb-1 pb-md-2"
+    >
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <h1 class="mb-0">
+              <a href="/home.html">
+                <img
+                  class="dwNavbar__logo"
+                  src="../images/dw__logo.svg"
+                  alt="隼思科技Dymain"
+                />
+              </a>
+            </h1>
+          </div>
+          <!-- desktop -->
+          <div class="col d-none d-md-flex justify-content-between">
+            <a class="font__size__14 dwNavbar__link" href="/works.html"
+              >案例分析</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/articles"
+              >隼司選讀</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/questions.html"
+              >常見問題</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+          <!-- mobile -->
+          <div class="col d-md-none text-right">
+            <img
+              class="dwNavbar__menu"
+              onclick="toggleMenu()"
+              src="../images/dw__icon__menu3.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 pl-5 dwNavbar__mobile d-none">
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link my-4 ml-2"
+              href="/works.html"
+              >案例分析</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/articles"
+              >隼司選讀</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/questions.html"
+              >常見問題</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container my-5 pt-5  pb-md-5">
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-3 mt-md-5">
+          <input
+            class="dwArticle__search pl-5"
+            type="text"
+            name=""
+            id=""
+            placeholder="您想找什麼內容呢？"
+          />
+          <img
+            class="dwArticle__search__icon position-absolute"
+            src="../images/dw__icon__search.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- 文章分類mobile -->
+      <div
+        class="d-flex d-lg-none mb-4 mb-md-5 dwArticle__type color__secondary"
+      >
+        <h3 class="font__size__14 mr-3 mr-md-4 color__primary cursor__pointer">
+          全部
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+        <h3
+          class="font__size__14 mr-3 mr-md-4 font__weight__regular cursor__pointer"
+        >
+          專案合作
+        </h3>
+      </div>
+      <h3 class="font__size__20 font-md__size__24 color__primary mb-3 mb-md-4">
+        熱門文章
+      </h3>
+
+      <!-- 熱門文章 -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade mb-4 mb-md-5"
+        data-ride="carousel"
+      >
+        <ol
+          class="carousel-indicators dwArticle__popular__indicator d-flex align-items-center"
+        >
+          <li
+            class="active dwArticle__popular__indicator__item"
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+          ></li>
+          <li
+            class="dwArticle__popular__indicator__item mx-3"
+            data-target="#carouselExampleIndicators"
+            data-slide-to="1"
+          ></li>
+          <li
+            class="dwArticle__popular__indicator__item"
+            data-target="#carouselExampleIndicators"
+            data-slide-to="2"
+          ></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active dwArticle__popular__wrap">
+            <img
+              src="../images/dw__blog__work.jpg"
+              class="d-block w-100 dwArticle__popular__wrap__img"
+              alt="..."
+            />
+            <div
+              class="d-flex flex-column justify-content-between h-100 p-4 position-absolute color__white"
+            >
+              <div class="d-flex align-items-center">
+                <div class="dwArticle__popular__tag mr-2 pr-1"></div>
+                <p class="color__white font__size__14 mb-0">
+                  專案合作
+                </p>
+              </div>
+
+              <div>
+                <h3
+                  class="font__size__24 font-md__size__32 mb-0 mb-sm-1 mb-md-0"
+                >
+                  文章標題
+                </h3>
+                <p
+                  class="dwArticle__popular__text font__size__14 letter__spacing w-75 mb-2 mb-sm-4 mb-md-5"
+                >
+                  提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程......
+                </p>
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 font-md__size__14 font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="../images/dw__icon__eye--white.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item dwArticle__popular__wrap">
+            <img
+              src="../images/dw__blog__work.jpg"
+              class="d-block w-100 dwArticle__popular__wrap__img"
+              alt="..."
+            />
+            <div
+              class="d-flex flex-column justify-content-between h-100 p-4 position-absolute color__white"
+            >
+              <div class="d-flex align-items-center">
+                <div class="dwArticle__popular__tag mr-2 pr-1"></div>
+                <p class="color__white font__size__14 mb-0">
+                  專案合作
+                </p>
+              </div>
+
+              <div>
+                <h3
+                  class="font__size__24 font-md__size__32 mb-0 mb-sm-1 mb-md-0"
+                >
+                  文章標題2
+                </h3>
+                <p
+                  class="dwArticle__popular__text font__size__14 letter__spacing w-75 mb-2 mb-sm-4 mb-md-5"
+                >
+                  提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程......
+                </p>
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 font-md__size__14 font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="../images/dw__icon__eye--white.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item dwArticle__popular__wrap">
+            <img
+              src="../images/dw__blog__work.jpg"
+              class="d-block w-100 dwArticle__popular__wrap__img"
+              alt="..."
+            />
+            <div
+              class="d-flex flex-column justify-content-between h-100 p-4 position-absolute color__white"
+            >
+              <div class="d-flex align-items-center">
+                <div class="dwArticle__popular__tag mr-2 pr-1"></div>
+                <p class="color__white font__size__14 mb-0">
+                  專案合作
+                </p>
+              </div>
+
+              <div>
+                <h3
+                  class="font__size__24 font-md__size__32 mb-0 mb-sm-1 mb-md-0"
+                >
+                  文章標題3
+                </h3>
+                <p
+                  class="dwArticle__popular__text font__size__14 letter__spacing w-75 mb-2 mb-sm-4 mb-md-5"
+                >
+                  提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程......
+                </p>
+                <div
+                  class="d-flex align-items-center mt-2 font__size__12 font-md__size__14 font__weight__regular"
+                >
+                  <div>
+                    Oct 11th 2018
+                  </div>
+                  <img
+                    class="ml-3 mr-1"
+                    src="../images/dw__icon__eye--white.svg"
+                    alt=""
+                  />
+                  <div>1340</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 當搜尋或點文章分類時把pt-5拿掉 -->
+      <div class="row pt-5">
+        <!-- 最新文章 -->
+        <div class="col-12 col-lg-9">
+          <h3
+            class="font__size__20 font-md__size__24 color__primary mb-3 mb-md-4"
+          >
+            最新文章
+          </h3>
+          <div class="row mb-5">
+            <div class="col-12 col-md-5">
+              <div class="dwArticle__normal__wrap">
+                <img
+                  class="dwArticle__normal__wrap__img"
+                  src="../images/dw__blog__work.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <div
+                class="d-flex flex-column justify-content-between h-100 color__primary"
+              >
+                <!-- 分類desktop -->
+                <div class="d-none d-md-flex align-items-center mt-2 mt-md-0">
+                  <div class="dwArticle__normal__tag bg__brand mr-2 pr-1"></div>
+                  <p class="font__size__14 mb-0">
+                    專案合作
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    class="d-flex justify-content-between d-md-block cursor__pointer font__size__20 font-md__size__24 mt-3 mt-md-0 mb-1 mb-md-2"
+                  >
+                    文章標題
+                    <!-- 分類mobile -->
+                    <div class="d-flex d-md-none align-items-center">
+                      <div
+                        class="dwArticle__normal__tag bg__brand mr-2 pr-1"
+                      ></div>
+                      <p class="font__size__14 mb-0">
+                        專案合作
+                      </p>
+                    </div>
+                  </h3>
+                  <p
+                    class="dwArticle__popular__text cursor__pointer font__size__14 letter__spacing mb-2 mb-sm-4 mb-md-5"
+                  >
+                    提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程......
+                  </p>
+                  <div
+                    class="d-flex align-items-center color__secondary mt-2 font__size__12 font-md__size__14 font__weight__regular"
+                  >
+                    <div>
+                      Oct 11th 2018
+                    </div>
+                    <img
+                      class="ml-3 mr-1"
+                      src="../images/dw__icon__eye.svg"
+                      alt=""
+                    />
+                    <div>1340</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-12 col-md-5">
+              <div class="dwArticle__normal__wrap">
+                <img
+                  class="dwArticle__normal__wrap__img"
+                  src="../images/dw__blog__work.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <div
+                class="d-flex flex-column justify-content-between h-100 color__primary"
+              >
+                <!-- 分類desktop -->
+                <div class="d-none d-md-flex align-items-center mt-2 mt-md-0">
+                  <div class="dwArticle__normal__tag bg__brand mr-2 pr-1"></div>
+                  <p class="font__size__14 mb-0">
+                    專案合作
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    class="d-flex justify-content-between d-md-block cursor__pointer font__size__20 font-md__size__24 mt-3 mt-md-0 mb-1 mb-md-2"
+                  >
+                    文章標題
+                    <!-- 分類mobile -->
+                    <div class="d-flex d-md-none align-items-center">
+                      <div
+                        class="dwArticle__normal__tag bg__brand mr-2 pr-1"
+                      ></div>
+                      <p class="font__size__14 mb-0">
+                        專案合作
+                      </p>
+                    </div>
+                  </h3>
+                  <p
+                    class="dwArticle__popular__text cursor__pointer font__size__14 letter__spacing mb-2 mb-sm-4 mb-md-5"
+                  >
+                    提供專業卓越的網站設計與網站系統，從網站企劃、系統架構規劃、RWD網頁設計、手機版網頁設計、電腦版網頁設計、後台程......
+                  </p>
+                  <div
+                    class="d-flex align-items-center color__secondary mt-2 font__size__12 font-md__size__14 font__weight__regular"
+                  >
+                    <div>
+                      Oct 11th 2018
+                    </div>
+                    <img
+                      class="ml-3 mr-1"
+                      src="../images/dw__icon__eye.svg"
+                      alt=""
+                    />
+                    <div>1340</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 文章分類desktop -->
+        <div class="col-3 d-none d-lg-block">
+          <p class="font__weight__medium mt-2 mb-4">文章分類</p>
+          <div
+            class="d-flex justify-content-between cursor__pointer color__primary mb-2 font__weight__medium"
+          >
+            <div class="d-flex align-items-center">
+              <div class="dwArticle__normal__tag bg__brand mr-2 pr-1"></div>
+              <h3 class="font__size__14 mb-0">
+                全部
+              </h3>
+            </div>
+            <div>1</div>
+          </div>
+          <div
+            class="d-flex justify-content-between cursor__pointer color__primary mb-2"
+          >
+            <div class="d-flex align-items-center">
+              <div class="dwArticle__normal__tag bg__brand mr-2 pr-1"></div>
+              <h3 class="font__size__14 font__weight__regular mb-0">
+                專案合作
+              </h3>
+            </div>
+            <div>1</div>
+          </div>
+          <div
+            class="d-flex justify-content-between cursor__pointer color__primary mb-2"
+          >
+            <div class="d-flex align-items-center">
+              <div class="dwArticle__normal__tag bg__brand mr-2 pr-1"></div>
+              <h3 class="font__size__14 font__weight__regular mb-0">
+                專案合作
+              </h3>
+            </div>
+            <div>1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分頁 -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center align-items-center">
+          <li class="page-item mr-4">
+            <a class="page-link" href="#">
+              <img src="../images/dw__icon__left.svg" alt="" />
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link page-link--active" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item ml-4">
+            <a class="page-link" href="#">
+              <img src="../images/dw__icon__right.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <footer class="container">
+      <div
+        class="row justify-content-between align-items-start dwFooter py-4 py-md-5"
+      >
+        <div class="col-12 col-lg-3 mb-3 mb-sm-4">
+          <img class="dwNavbar__logo" src="../images/dw__logo.svg" alt="" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">服務項目</h3>
+          <div class="row justify-content-between">
+            <a
+              href="/works.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pr-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >案例分析</a
+            >
+            <a
+              href="/articles"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >隼思選讀</a
+            >
+            <a
+              href="/questions.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3"
+              >常見問題</a
+            >
+            <a
+              href="/contact.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pl-sm-0 px-lg-3"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">聯絡資訊</h3>
+          <div class="row">
+            <p
+              class="col-12 col-lg-6 order-lg-1 font__size__14 color__secondary mb-lg-4"
+            >
+              02-2222-1929
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-3 font__size__14 color__secondary"
+            >
+              0910-338-721
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-2 font__size__14 color__secondary mb-lg-4 px-lg-0"
+            >
+              david.weng.android@gmail.com
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-4 font__size__14 color__secondary mb-0 px-lg-0"
+            >
+              台北市松山區敦化北路153-10號
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3
+        class="font__size__14 font__weight__regular color__secondary text-center my-4 my-md-5"
+      >
+        © Copyright 2019. 隼思科技有限公司 Inc.
+      </h3>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

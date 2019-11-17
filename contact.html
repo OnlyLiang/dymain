@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>隼司科技 ｜ 立即諮詢</title>
+    <style>
+        .dwForm {
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(38, 176, 226, .12);
+        }
+
+        .dwForm__input {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #D3D3D3;
+            border-radius: 5px;
+            transition: .2s;
+        }
+
+        .dwForm__input::placeholder {
+            color: #b3b3b3;
+        }
+
+        .dwForm__input:focus {
+            color: #333333;
+            border-color: #26B0E2;
+            outline: none;
+        }
+
+        .dwForm__input__title {
+            font-size: 12px;
+            color: #26B0E2;
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+            left: 10px;
+            background: white;
+            padding: 0 8px;
+            opacity: 0;
+            transition: .2s;
+        }
+
+        .dwForm__input__title--show {
+            opacity: 1;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .dwForm__checkbox__label {
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            color: #b3b3b3;
+            width: 100%;
+            height: 36px;
+            line-height: 32px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            cursor: pointer;
+        }
+
+        .dwForm__checkbox__label--checked {
+            border-color: #26B0E2;
+            color: #26B0E2; 
+        }
+
+        .dwForm__textarea {
+            width: 100%;
+            outline: none;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .dwForm__textarea:focus {
+            border-color: #26B0E2;
+        }
+    </style>
+  </head>
+  <body>
+    <header
+      class="dwNavbar container-fluid position-fixed px-0 pt-md-1 pb-1 pb-md-2"
+    >
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <h1 class="mb-0">
+              <a href="/home.html">
+                <img
+                  class="dwNavbar__logo"
+                  src="images/dw__logo.svg"
+                  alt="隼思科技Dymain"
+                />
+              </a>
+            </h1>
+          </div>
+          <!-- desktop -->
+          <div class="col d-none d-md-flex justify-content-between">
+            <a class="font__size__14 dwNavbar__link" href="/works.html"
+              >案例分析</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/articles"
+              >隼司選讀</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/questions.html"
+              >常見問題</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+          <!-- mobile -->
+          <div class="col d-md-none text-right">
+            <img
+              class="dwNavbar__menu"
+              onclick="toggleMenu()"
+              src="images/dw__icon__menu3.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 pl-5 dwNavbar__mobile d-none">
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link my-4 ml-2"
+              href="/works.html"
+              >案例分析</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/articles"
+              >隼司選讀</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/questions.html"
+              >常見問題</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container pt-5">
+      <h3 data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 pt-md-5 mb-3 mb-md-4"
+      >
+        <span class="title__decoration"
+          >告訴我們您的想法<span class="d-none d-md-inline"
+            >，一起創造價值</span
+          ></span
+        >
+      </h3>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center color__secondary letter__spacing">
+          <p data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-once="true">
+            我們服務的範圍很全面，從客製化網站以及APP開發到不同系統間整合都具有豐富經驗，儘管描述您的任何需求，我們將協助您從模糊的輪廓走向清晰完整。
+          </p>
+        </div>
+
+        <div class="dwForm col-12 col-md-10 col-lg-8 mt-4 mb-5 mt-md-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-9">
+                    <h3 class="font__size__20 font-md__size__24 color__primary font__weight__medium mb-4 pb-md-2">聯絡方式</h3>
+                    <div class="position-relative mb-4 pb-md-2">
+                        <input id="name" type="text" class="dwForm__input pl-3" oninput="inputChange('name')" value="" placeholder="您的稱呼">
+                            <span id="nameTitle" class="dwForm__input__title">您的稱呼</span>
+                        </input>
+                    </div>
+                    <div class="position-relative mb-4 pb-md-2">
+                        <input id="email" type="text" class="dwForm__input pl-3" oninput="inputChange('email')" value="" placeholder="您的E-mail">
+                            <span id="emailTitle" class="dwForm__input__title">您的E-mail</span>
+                        </input>
+                    </div>
+                    <div class="position-relative mb-4 pb-md-2">
+                        <input id="number" type="text" class="dwForm__input pl-3" oninput="inputChange('number')" value="" placeholder="您的電話">
+                            <span id="numberTitle" class="dwForm__input__title">您的電話</span>
+                        </input>
+                    </div>
+                    <h3 class="font__size__20 font-md__size__24 color__primary font__weight__medium mt-5 mb-4">您需要的服務類型(可複選）</h3>
+                    <div class="row">
+                        <div class="col-6 col-lg-4 mb-2">
+                            <input class="dwForm__checkbox" type="checkbox" name="" id="app">
+                            <label class="dwForm__checkbox__label text-center" onclick="checkboxChange('app')" id="appLabel" for="app">APP設計</label>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <input class="dwForm__checkbox" type="checkbox" name="" id="web">
+                            <label class="dwForm__checkbox__label text-center" onclick="checkboxChange('web')" id="webLabel" for="web">網站設計</label>
+                        </div>
+                        <div class="col-6 col-lg-4 mb-2">
+                            <input class="dwForm__checkbox" type="checkbox" name="" id="cooperation">
+                            <label class="dwForm__checkbox__label text-center" onclick="checkboxChange('cooperation')" id="cooperationLabel" for="cooperation">相關合作</label>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <input class="dwForm__checkbox" type="checkbox" name="" id="rental">
+                            <label class="dwForm__checkbox__label text-center" onclick="checkboxChange('rental')" id="rentalLabel" for="rental">系統租賃</label>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <input class="dwForm__checkbox" type="checkbox" name="" id="other">
+                            <label class="dwForm__checkbox__label text-center" onclick="checkboxChange('other')" id="otherLabel" for="other">其他</label>
+                        </div>
+                    </div>
+                    <h3 class="font__size__20 font-md__size__24 color__primary font__weight__medium mt-5 mb-4">告訴我們更多您的專案細節</h3>
+                    <textarea class="dwForm__textarea p-3" name="" id="" cols="30" rows="6"></textarea>
+                    <div class="btn__primary mx-auto mt-5">
+                        送出
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container mt-5">
+        <div
+          class="row justify-content-between align-items-start dwFooter py-4 py-md-5"
+        >
+          <div class="col-12 col-lg-3 mb-3 mb-sm-4">
+            <img class="dwNavbar__logo" src="images/dw__logo.svg" alt="" />
+          </div>
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0 pl-4 pl-lg-3">
+            <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">服務項目</h3>
+            <div class="row justify-content-between">
+              <a
+                href="/works.html"
+                class="col-6 col-sm-auto col-lg-6 dwFooter__link pr-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+                >案例分析</a
+              >
+              <a
+                href="/articles"
+                class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+                >隼思選讀</a
+              >
+              <a
+                href="/questions.html"
+                class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3"
+                >常見問題</a
+              >
+              <a
+                href="/contact.html"
+                class="col-6 col-sm-auto col-lg-6 dwFooter__link pl-sm-0 px-lg-3"
+                >立即諮詢</a
+              >
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 pl-4 pl-lg-3">
+            <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">聯絡資訊</h3>
+            <div class="row">
+              <p class="col-12 col-lg-6 order-lg-1 font__size__14 color__secondary mb-lg-4">
+                02-2222-1929
+              </p>
+              <p class="col-12 col-lg-6 order-lg-3 font__size__14 color__secondary">
+                0910-338-721
+              </p>
+              <p class="col-12 col-lg-6 order-lg-2 font__size__14 color__secondary mb-lg-4 px-lg-0">
+                david.weng.android@gmail.com
+              </p>
+              <p class="col-12 col-lg-6 order-lg-4 font__size__14 color__secondary mb-0 px-lg-0">
+                台北市松山區敦化北路153-10號
+              </p>
+            </div>
+          </div>
+        </div>
+        <h3
+          class="font__size__14 font__weight__regular color__secondary text-center my-4 my-md-5"
+        >
+          © Copyright 2019. 隼思科技有限公司 Inc.
+        </h3>
+      </footer>
+
+    <script src="scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      
+      const inputChange = (type) => {
+        let input = document.querySelector(`#${type}`)
+        let inputTitle = document.querySelector(`#${type}Title`)
+        if (input.value != '') {
+            inputTitle.classList.add('dwForm__input__title--show')
+        } else {
+            inputTitle.classList.remove('dwForm__input__title--show')
+        }
+      }
+
+      const checkboxChange = (type) => {
+          let checkbox = document.querySelector(`#${type}`)
+          let label = document.querySelector(`#${type}Label`)
+          if (!checkbox.checked) {
+            label.classList.add('dwForm__checkbox__label--checked')
+          } else {
+            label.classList.remove('dwForm__checkbox__label--checked')
+          }
+      }
+    </script>
+  </body>
+</html>

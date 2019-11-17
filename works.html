@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>隼思科技 | 案例分析</title>
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+
+      .dwWorks__filter {
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        color: #b3b3b3;
+        width: 100%;
+        height: 36px;
+        line-height: 32px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      input[type="radio"]:checked + .dwWorks__filter {
+        border-color: #26b0e2;
+        color: #26b0e2;
+      }
+
+      .dwWorks__wrap {
+        padding-bottom: 75%;
+        width: 100%;
+        position: relative;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 15px;
+      }
+
+      .dwWorks__wrap:hover .dwWorks__wrap__detail {
+        opacity: 1;
+      }
+
+      .dwWorks__wrap img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 15px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .dwWorks__wrap__detail {
+        bottom: 0;
+        opacity: 1;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        border-radius: 15px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        .dwWorks__wrap__detail {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="dwNavbar container-fluid position-fixed px-0 pt-md-1 pb-1 pb-md-2"
+    >
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <h1 class="mb-0">
+              <a href="/home.html">
+                <img
+                  class="dwNavbar__logo"
+                  src="images/dw__logo.svg"
+                  alt="隼思科技Dymain"
+                />
+              </a>
+            </h1>
+          </div>
+          <!-- desktop -->
+          <div class="col d-none d-md-flex justify-content-between">
+            <a class="font__size__14 dwNavbar__link" href="/works.html"
+              >案例分析</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/articles"
+              >隼司選讀</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/questions.html"
+              >常見問題</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+          <!-- mobile -->
+          <div class="col d-md-none text-right">
+            <img
+              class="dwNavbar__menu"
+              onclick="toggleMenu()"
+              src="images/dw__icon__menu3.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 pl-5 dwNavbar__mobile d-none">
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link my-4 ml-2"
+              href="/works.html"
+              >案例分析</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/articles"
+              >隼司選讀</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/questions.html"
+              >常見問題</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container pt-5">
+      <h3
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-once="true"
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 pt-md-5 mb-3 mb-md-4"
+      >
+        <span class="title__decoration">
+          客戶的喜悅，是我們對產品堅持的動力
+        </span>
+      </h3>
+      <div class="row justify-content-center">
+        <div
+          class="col-12 col-md-10 col-lg-8 text-center color__secondary letter__spacing"
+        >
+          <p
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            class="mb-0 letter__spacing"
+          >
+            我們服務的範圍很全面，從客製化網站以及APP開發到不同系統間整合都具有豐富經驗，儘管描述您的任何需求，我們將協助您從模糊的輪廓走向清晰完整。
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center justify-content-md-end mt-5">
+        <div class="col-4 col-lg-2">
+          <input type="radio" name="filter" value="all" id="all" checked />
+          <label class="dwWorks__filter" for="all">全部</label>
+        </div>
+        <div class="col-4 col-lg-2">
+          <input type="radio" name="filter" value="app" id="app" />
+          <label class="dwWorks__filter" for="app"
+            >APP<span class="d-none d-sm-inline">設計</span></label
+          >
+        </div>
+        <div class="col-4 col-lg-2">
+          <input type="radio" name="filter" value="web" id="web" />
+          <label class="dwWorks__filter" for="web"
+            >網站<span class="d-none d-sm-inline">設計</span></label
+          >
+        </div>
+      </div>
+      <div class="row justify-content-between mt-5 pt-md-4">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6 mt-md-5 pt-md-5"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6 mt-md-5 pt-md-5"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6 mt-md-5 pt-md-5"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-between mb-5">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+          class="col-12 col-md-6"
+        >
+          <div class="dwWorks__wrap mb-4 mb-md-0">
+            <img src="images/dw__demo.png" alt="" />
+            <div
+              class="dwWorks__wrap__detail position-absolute color__white p-3 p-sm-4"
+            >
+              <h2 class="font__size__20 mb-0">WAWO安心購物平台</h2>
+              <p class="font__size__14 mb-0 letter__spacing">
+                加入 Fourdesirie
+                之前，在前公司做過的產品都是偏向一般的工具類產品，像是......
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+      class="container pt-md-5 pb-5"
+    >
+      <h3
+        class="text-center font__size__28 font-md__size__32 font__weight__medium color__primary mt-5 mb-4"
+      >
+        <span class="title__decoration">想要和我們聊聊？</span>
+      </h3>
+      <p class="color__secondary text-center mb-5 pb-4 letter__spacing">
+        帶著您的想法與目標，我們將協助您從模糊的輪廓走向清晰完整、趨近出色理想。
+      </p>
+      <button class="btn__primary d-block mx-auto text-center mb-5">
+        立即諮詢
+      </button>
+    </div>
+
+    <footer class="container">
+      <div
+        class="row justify-content-between align-items-start dwFooter py-4 py-md-5"
+      >
+        <div class="col-12 col-lg-3 mb-3 mb-sm-4">
+          <img class="dwNavbar__logo" src="images/dw__logo.svg" alt="" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">服務項目</h3>
+          <div class="row justify-content-between">
+            <a
+              href="/works.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pr-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >案例分析</a
+            >
+            <a
+              href="/articles"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >隼思選讀</a
+            >
+            <a
+              href="/questions.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3"
+              >常見問題</a
+            >
+            <a
+              href="/contact.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pl-sm-0 px-lg-3"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">聯絡資訊</h3>
+          <div class="row">
+            <p
+              class="col-12 col-lg-6 order-lg-1 font__size__14 color__secondary mb-lg-4"
+            >
+              02-2222-1929
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-3 font__size__14 color__secondary"
+            >
+              0910-338-721
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-2 font__size__14 color__secondary mb-lg-4 px-lg-0"
+            >
+              david.weng.android@gmail.com
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-4 font__size__14 color__secondary mb-0 px-lg-0"
+            >
+              台北市松山區敦化北路153-10號
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3
+        class="font__size__14 font__weight__regular color__secondary text-center my-4 my-md-5"
+      >
+        © Copyright 2019. 隼思科技有限公司 Inc.
+      </h3>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

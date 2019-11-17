@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="795" height="714.851" viewBox="0 0 795 714.851">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.243" y1="0.041" x2="0.324" y2="0.489" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dfffbd" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#dfffbd" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="Subtraction_24" x="291.793" y="240.775" width="503.207" height="468.318" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#dfffbd" flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.738" y1="0.99" x2="0.548" y2="0.477" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#26b0e2" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#26b0e2" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="Subtraction_27" x="0" y="23.418" width="501.422" height="502.733" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#26b0e2" flood-opacity="0.635"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.878" y1="0.741" x2="0.228" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dfffbd"/>
+      <stop offset="1" stop-color="#25aff4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.864" y1="0.788" x2="0.206" y2="0.146" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-5" x1="0.97" y1="0.798" x2="0.226" y2="0" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-6" x1="0.825" y1="0.085" x2="1.645" y2="0.085" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-7" x1="0.746" y1="0.104" x2="1.565" y2="0.104" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-8" x1="0.857" y1="0.281" x2="1.799" y2="0.281" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-9" x1="0.879" y1="0.823" x2="-0.217" y2="-0.513" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-10" x1="0.905" y1="0.773" x2="-1.078" y2="-1.314" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-11" x1="-26.177" y1="17.35" x2="-25.349" y2="17.35" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-12" x1="-26.35" y1="17.377" x2="-25.522" y2="17.377" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-13" x1="-2.403" y1="1.125" x2="0.381" y2="1.408" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-14" x1="-2.17" y1="0.972" x2="0.614" y2="1.255" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-15" x1="-1.929" y1="0.813" x2="0.856" y2="1.096" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-16" x1="-1.659" y1="0.658" x2="1.086" y2="0.941" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-17" x1="4.587" y1="-3.05" x2="7.368" y2="-2.767" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-18" x1="6.017" y1="-6.545" x2="5.953" y2="-5.792" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-19" x1="4.759" y1="-3.205" x2="7.498" y2="-2.922" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-20" x1="6.36" y1="-4.898" x2="5.94" y2="-3.946" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-21" x1="4.992" y1="-3.362" x2="7.731" y2="-3.079" xlink:href="#linear-gradient-3"/>
+    <filter id="XMLID_426_" x="165.11" y="409.223" width="68.805" height="109.228" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-color="#26b0e2" flood-opacity="0.639"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-22" x1="6.392" y1="-7.357" x2="0.5" y2="1.222" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-23" x1="0.87" y1="0.735" x2="0" y2="0" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-24" x1="0.916" y1="1" x2="-1.493" y2="-1.818" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g id="Group_1363" data-name="Group 1363" transform="translate(-10004 -4491.582)">
+    <g transform="matrix(1, 0, 0, 1, 10004, 4491.58)" filter="url(#Subtraction_24)">
+      <path id="Subtraction_24-2" data-name="Subtraction 24" d="M-7181.793-5299.326l-395.89-159.163c-3.789-1.531-7.486-2.952-11.061-4.325l-.088-.034-.062-.023-.017-.006-.015-.006c-8.3-3.187-16.134-6.2-22.22-9.514-6.738-3.67-10.75-7.39-12.625-11.705-1.851-4.254-1.613-9.134.726-14.919l318-193.039a92.239,92.239,0,0,1,18.064-10.392,68.009,68.009,0,0,1,11.563-3.73,59.988,59.988,0,0,1,13.077-1.46,62.956,62.956,0,0,1,23.633,4.767l56.912,22.976v380.575Z" transform="translate(7940.79 5972.42)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 10004, 4491.58)" filter="url(#Subtraction_27)">
+      <path id="Subtraction_27-2" data-name="Subtraction 27" d="M347.4,572.732h-.006a51.16,51.16,0,0,1-25.219-6.291L249,519.365V130h69.322L684.1,367.332c5.335,3.335,6.381,7.4,6.319,10.22a11.693,11.693,0,0,1-1.607,5.567,9.656,9.656,0,0,1-3.336,3.516L402.417,553.128C382.238,566.136,363.727,572.732,347.4,572.732Z" transform="translate(-225 -82.58)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <g id="XMLID_578_" transform="translate(10270.406 5121.795)">
+    <animateMotion from="0,0" path="M0 0 A30 20,0 1 1 0 1" dur="12s" fill="freeze" repeatCount="indefinite"/>
+      <g id="XMLID_585_" transform="translate(0 7.871)" opacity="0.26">
+        <path id="XMLID_586_" d="M190.129,447.719c-19.211-11.073-19.344-29.083-.267-40.156s50.295-10.939,69.505.133,19.344,29.083.267,40.156S209.34,458.791,190.129,447.719Zm61.5-35.486c-14.942-8.538-38.955-8.671-53.763-.133s-14.675,22.412.133,31.084c14.942,8.538,38.955,8.672,53.763.133S266.438,420.9,251.63,412.232Z" transform="translate(-175.637 -399.325)" fill="url(#linear-gradient-3)"/>
+      </g>
+      <g id="XMLID_581_" transform="translate(0 0)" opacity="0.26">
+        <path id="XMLID_582_" d="M190.129,441.819c-19.211-11.073-19.344-29.083-.267-40.156s50.295-10.939,69.505.133,19.344,29.083.267,40.156S209.34,453.025,190.129,441.819Zm61.5-35.353c-14.942-8.538-38.955-8.671-53.763-.133s-14.675,22.412.133,31.084c14.942,8.538,38.955,8.671,53.763.133C266.571,428.878,266.438,415,251.63,406.466Z" transform="translate(-175.637 -393.425)" fill="url(#linear-gradient-4)"/>
+      </g>
+      <g id="XMLID_579_" transform="translate(0 7.338)">
+        <path id="XMLID_580_" d="M190.129,439.981c-19.211-11.073-19.344-29.083-.267-40.156a9.05,9.05,0,0,1,7.871,0c2.135,1.2,2.135,3.335,0,4.536-14.808,8.538-14.675,22.412.133,31.084,14.942,8.538,38.955,8.671,53.763.133a9.05,9.05,0,0,1,7.871,0c2.135,1.2,2.135,3.335,0,4.536C240.557,451.187,209.34,451.187,190.129,439.981Z" transform="translate(-175.637 -398.925)" fill="url(#linear-gradient-5)"/>
+      </g>
+    </g>
+    <g id="XMLID_578_2" data-name="XMLID_578_" transform="translate(10509 4587.076)">
+    <animateMotion from="0,0" path="M0 0 A30 30,0 1 0 0 1" dur="16s" fill="freeze" repeatCount="indefinite"/>
+      <g id="XMLID_585_2" data-name="XMLID_585_" transform="translate(0 3.344)" opacity="0.26">
+        <path id="XMLID_586_2" data-name="XMLID_586_" d="M181.794,419.883c-8.161-4.7-8.218-12.355-.113-17.059s21.366-4.647,29.527.057,8.218,12.355.113,17.059S189.955,424.587,181.794,419.883Zm26.126-15.075c-6.347-3.627-16.549-3.684-22.839-.057s-6.234,9.521.057,13.2c6.347,3.627,16.549,3.684,22.839.057S214.211,408.492,207.92,404.808Z" transform="translate(-175.637 -399.325)" fill="url(#linear-gradient-6)"/>
+      </g>
+      <g id="XMLID_581_2" data-name="XMLID_581_" transform="translate(0 0)" opacity="0.26">
+        <path id="XMLID_582_2" data-name="XMLID_582_" d="M181.794,413.983c-8.161-4.7-8.218-12.355-.113-17.059s21.366-4.647,29.527.057,8.218,12.355.113,17.059S189.955,418.744,181.794,413.983Zm26.126-15.018c-6.347-3.627-16.549-3.684-22.839-.057s-6.234,9.521.057,13.2c6.347,3.627,16.549,3.684,22.839.057C214.267,408.486,214.211,402.592,207.92,398.965Z" transform="translate(-175.637 -393.425)" fill="url(#linear-gradient-7)"/>
+      </g>
+      <g id="XMLID_579_2" data-name="XMLID_579_" transform="translate(0 3.117)">
+        <path id="XMLID_580_2" data-name="XMLID_580_" d="M181.794,416.366c-8.161-4.7-8.218-12.355-.113-17.059a3.844,3.844,0,0,1,3.344,0,1.022,1.022,0,0,1,0,1.927c-6.291,3.627-6.234,9.521.057,13.2,6.347,3.627,16.549,3.684,22.839.057a3.845,3.845,0,0,1,3.344,0,1.022,1.022,0,0,1,0,1.927C203.216,421.127,189.955,421.127,181.794,416.366Z" transform="translate(-175.637 -398.925)" fill="url(#linear-gradient-8)"/>
+      </g>
+    </g>
+    <g id="XMLID_578_3" data-name="XMLID_578_" transform="translate(10056.773 4710.33)">
+    <animateMotion from="0,0" path="M0 0 A20 10,0 1 0 0 1" dur="12s" fill="freeze" repeatCount="indefinite"/>
+      <g id="XMLID_585_3" data-name="XMLID_585_" transform="translate(0 5.273)" opacity="0.26">
+        <path id="XMLID_586_3" data-name="XMLID_586_" d="M185.346,431.747c-12.87-7.418-12.96-19.484-.179-26.9s33.7-7.329,46.566.089,12.96,19.484.179,26.9S198.217,439.165,185.346,431.747Zm41.2-23.775c-10.01-5.72-26.1-5.81-36.019-.089s-9.832,15.015.089,20.825c10.01,5.72,26.1,5.81,36.019.089S236.47,413.782,226.549,407.972Z" transform="translate(-175.637 -399.325)" fill="#25aff4"/>
+      </g>
+      <g id="XMLID_581_3" data-name="XMLID_581_" transform="translate(0 0)" opacity="0.26">
+        <path id="XMLID_582_3" data-name="XMLID_582_" d="M185.346,425.847c-12.87-7.418-12.96-19.484-.179-26.9s33.7-7.329,46.566.089,12.96,19.484.179,26.9S198.217,433.355,185.346,425.847Zm41.2-23.685c-10.01-5.72-26.1-5.81-36.019-.089s-9.832,15.015.089,20.825c10.01,5.72,26.1,5.81,36.019.089C236.56,417.177,236.47,407.882,226.549,402.162Z" transform="translate(-175.637 -393.425)" fill="#25aff4"/>
+      </g>
+      <g id="XMLID_579_3" data-name="XMLID_579_" transform="translate(0 4.916)" opacity="0.397">
+        <path id="XMLID_580_3" data-name="XMLID_580_" d="M185.346,426.431c-12.87-7.418-12.96-19.484-.179-26.9a6.063,6.063,0,0,1,5.273,0,1.612,1.612,0,0,1,0,3.039c-9.921,5.72-9.832,15.015.089,20.825,10.01,5.72,26.1,5.81,36.019.089a6.063,6.063,0,0,1,5.273,0,1.613,1.613,0,0,1,0,3.039C219.131,433.939,198.217,433.939,185.346,426.431Z" transform="translate(-175.637 -398.925)" fill="#25aff4"/>
+      </g>
+    </g>
+    <g id="XMLID_160_" transform="translate(10385.947 5009.959)">
+      <animateMotion from="0,0" path="M0 0 A10 20,0 1 0 0 1" dur="12s" fill="freeze" repeatCount="indefinite"/>
+      <path id="XMLID_162_" d="M241.847,369.926a8.2,8.2,0,0,0-7.471,0c-2,1.2-2,3.068,0,4.269a8.2,8.2,0,0,0,7.471,0C243.981,372.994,243.981,371.126,241.847,369.926Z" transform="translate(-232.875 -367.157)" opacity="0.27" fill="url(#linear-gradient-9)"/>
+      <path id="XMLID_161_" d="M241.847,368.526a8.2,8.2,0,0,0-7.471,0c-2,1.2-2,3.068,0,4.269a8.2,8.2,0,0,0,7.471,0C243.981,371.727,243.981,369.726,241.847,368.526Z" transform="translate(-232.875 -367.625)" fill="url(#linear-gradient-10)"/>
+    </g>
+    <g id="XMLID_157_" transform="translate(10199.715 4491.582)">
+      <path id="XMLID_159_" d="M110.747,113.826a8.2,8.2,0,0,0-7.471,0c-2,1.2-2,3.068,0,4.269a8.2,8.2,0,0,0,7.471,0C112.748,117.027,112.748,115.026,110.747,113.826Z" transform="translate(-101.775 -111.191)" opacity="0.27" fill="url(#linear-gradient-11)"/>
+      <path id="XMLID_158_" d="M110.747,112.525a8.2,8.2,0,0,0-7.471,0c-2,1.2-2,3.068,0,4.269a8.2,8.2,0,0,0,7.471,0C112.748,115.594,112.748,113.726,110.747,112.525Z" transform="translate(-101.775 -111.625)" fill="url(#linear-gradient-12)"/>
+    </g>
+    <g id="XMLID_433_" transform="translate(10653.728 4869.403)">
+      <g id="XMLID_443_" transform="translate(0 0)">
+        <path id="XMLID_447_" d="M105.705,200.8,96.5,195.459V148.5l9.205,5.336Z" transform="translate(-96.5 -148.5)" opacity="0.26" fill="url(#linear-gradient-13)"/>
+        <path id="XMLID_446_" d="M105.705,194.549,96.5,189.212V167.2l9.205,5.336Z" transform="translate(-96.5 -142.253)" fill="#dfffbd"/>
+      </g>
+      <g id="XMLID_440_" transform="translate(13.874 8.004)">
+        <path id="XMLID_442_" d="M116.105,206.8l-9.205-5.336V154.5l9.205,5.336Z" transform="translate(-106.9 -154.5)" opacity="0.26" fill="url(#linear-gradient-14)"/>
+        <path id="XMLID_441_" d="M116.105,203.288l-9.205-5.336V165l9.205,5.336Z" transform="translate(-106.9 -150.992)" fill="#dfffbd"/>
+      </g>
+      <g id="XMLID_437_" transform="translate(28.149 16.276)">
+        <path id="XMLID_439_" d="M126.805,213l-9.205-5.336V160.7l9.205,5.336Z" transform="translate(-117.6 -160.7)" opacity="0.26" fill="url(#linear-gradient-15)"/>
+        <path id="XMLID_438_" d="M126.805,206.448l-9.205-5.336V180.3l9.205,5.336Z" transform="translate(-117.6 -154.152)" fill="#dfffbd"/>
+      </g>
+      <g id="XMLID_434_" transform="translate(42.023 24.414)">
+        <path id="XMLID_436_" d="M137.339,219.1,128,213.626V166.8l9.339,5.336Z" transform="translate(-128 -166.8)" opacity="0.26" fill="url(#linear-gradient-16)"/>
+        <path id="XMLID_435_" d="M137.339,216.891,128,211.421V173.4l9.339,5.336Z" transform="translate(-128 -164.595)" fill="#dfffbd"/>
+      </g>
+    </g>
+    <g id="XMLID_423_" transform="translate(10166.695 4909.463)">
+      <g id="XMLID_430_" transform="translate(0 0)">
+        <path id="XMLID_432_" d="M402.872,251.527l-8.671-5.07V202.3l8.671,5.069Z" transform="translate(-394.2 -202.3)" opacity="0.26" fill="url(#linear-gradient-17)"/>
+        <path id="XMLID_431_" d="M402.872,245.648l-8.671-5.07V219.9l8.671,5.069Z" transform="translate(-394.2 -196.42)" fill="url(#linear-gradient-18)"/>
+      </g>
+      <g id="XMLID_427_" transform="translate(12.94 7.604)">
+        <path id="XMLID_429_" d="M412.7,257.227l-8.8-5.069V208l8.8,4.936Z" transform="translate(-403.9 -208)" opacity="0.26" fill="url(#linear-gradient-19)"/>
+        <path id="XMLID_428_" d="M412.7,253.953l-8.8-5.069V217.8l8.8,5.069Z" transform="translate(-403.9 -204.726)" fill="url(#linear-gradient-20)"/>
+      </g>
+      <g id="XMLID_424_" transform="translate(26.415 15.342)">
+        <g transform="matrix(1, 0, 0, 1, -189.11, -433.22)" filter="url(#XMLID_426_)">
+          <path id="XMLID_426_2" data-name="XMLID_426_" d="M422.8,263.027l-8.8-5.069V213.8l8.8,5.07Z" transform="translate(-224.89 219.42)" opacity="0.26" fill="url(#linear-gradient-21)"/>
+        </g>
+        <path id="XMLID_425_" d="M422.8,256.88l-8.8-5.069V232.2l8.8,5.069Z" transform="translate(-414 -207.653)" fill="url(#linear-gradient-22)"/>
+      </g>
+    </g>
+    <g id="Group_1362" data-name="Group 1362" transform="translate(10575.575 5073.229)">
+      <animateMotion from="0,0" path="M0 0 A50 50,0 1 1 0 1" dur="16s" fill="freeze" repeatCount="indefinite"/>
+      <path id="Path_1537" data-name="Path 1537" d="M378.732,383.863c-4.536-2.618-11.892-2.632-16.4-.03s-4.485,6.851.051,9.469,11.894,2.632,16.4.03S383.269,386.483,378.732,383.863Z" transform="translate(-358.966 -377.924)" opacity="0.27" fill="url(#linear-gradient-23)"/>
+      <path id="Path_1538" data-name="Path 1538" d="M378.732,380.912c-4.536-2.618-11.892-2.632-16.4-.03s-4.485,6.851.051,9.469,11.894,2.633,16.4.03S383.269,383.532,378.732,380.912Z" transform="translate(-358.966 -378.94)" fill="url(#linear-gradient-24)"/>
+    </g>
+  </g>
+</svg>

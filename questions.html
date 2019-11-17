@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>隼思科技 | 常見問題</title>
+    <style>
+      .dwQuestion__search {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        transition: 0.2s;
+      }
+
+      .dwQuestion__search::placeholder {
+        color: #b3b3b3;
+      }
+
+      .dwQuestion__search:focus {
+        color: #333333;
+        border-color: #26b0e2;
+        outline: none;
+      }
+
+      .dwQuestion__search__icon {
+        height: 16px;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .dwQuestion__list {
+        border-bottom: 1px solid #e3e3e3;
+      }
+
+      .dwQuestion__list--show {
+        border-color: #26b0e2;
+      }
+
+      .dwQuestion__list img {
+        height: 36px;
+      }
+
+      .dwQuestion__list h3,
+      .dwQuestion__list img {
+        cursor: pointer;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="dwNavbar container-fluid position-fixed px-0 pt-md-1 pb-1 pb-md-2"
+    >
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <h1 class="mb-0">
+              <a href="/home.html">
+                <img
+                  class="dwNavbar__logo"
+                  src="images/dw__logo.svg"
+                  alt="隼思科技Dymain"
+                />
+              </a>
+            </h1>
+          </div>
+          <!-- desktop -->
+          <div class="col d-none d-md-flex justify-content-between">
+            <a class="font__size__14 dwNavbar__link" href="/works.html"
+              >案例分析</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/articles"
+              >隼司選讀</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/questions.html"
+              >常見問題</a
+            >
+            <a class="font__size__14 dwNavbar__link" href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+          <!-- mobile -->
+          <div class="col d-md-none text-right">
+            <img
+              class="dwNavbar__menu"
+              onclick="toggleMenu()"
+              src="images/dw__icon__menu3.svg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 pl-5 dwNavbar__mobile d-none">
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link my-4 ml-2"
+              href="/works.html"
+              >案例分析</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/articles"
+              >隼司選讀</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/questions.html"
+              >常見問題</a
+            >
+            <a
+              class="font__size__14 d-block dwNavbar__mobile__link mb-4 ml-2"
+              href="/contact.html"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container my-5 py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-5 mt-md-5">
+          <input
+            class="dwQuestion__search pl-5"
+            type="text"
+            name=""
+            id=""
+            placeholder="您想找什麼問題呢？"
+          />
+          <img
+            class="dwQuestion__search__icon position-absolute"
+            src="images/dw__icon__search.svg"
+            alt=""
+          />
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 mt-md-5">
+          <div
+            class="d-flex justify-content-between align-items-center dwQuestion__list list1 pb-2"
+          >
+            <h3
+              data-toggle="collapse"
+              data-target="#list1"
+              class="font__size__20 font-md__size__24 color__primary"
+            >
+              請問服務流程？
+            </h3>
+            <img
+              data-toggle="collapse"
+              data-target="#list1"
+              src="images/dw__icon__down.svg"
+              alt=""
+            />
+          </div>
+          <div class="collapse" id="list1">
+            <p class="my-3 letter__spacing">
+              一分鐘完成註冊，一個下午做好網站設計，一個星期就能正式對外營運！以大幅增進「成交訂單」為目標的電商架站平台，採用
+              RWD
+              響應式網頁設計，聰明適應於不同裝置；提供多款設計版型，支援從商品上架、金物流串接到促銷活動設定等所有功能，協助你輕鬆在短時間內打造理想中的風格店面。
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 mt-3">
+          <div
+            class="d-flex justify-content-between align-items-center dwQuestion__list list2 pb-2"
+          >
+            <h3
+              data-toggle="collapse"
+              data-target="#list2"
+              class="font__size__20 font-md__size__24 color__primary"
+            >
+              請問服務流程？
+            </h3>
+            <img
+              data-toggle="collapse"
+              data-target="#list2"
+              src="images/dw__icon__down.svg"
+              alt=""
+            />
+          </div>
+          <div class="collapse" id="list2">
+            <p class="my-3 letter__spacing">
+              一分鐘完成註冊，一個下午做好網站設計，一個星期就能正式對外營運！以大幅增進「成交訂單」為目標的電商架站平台，採用
+              RWD
+              響應式網頁設計，聰明適應於不同裝置；提供多款設計版型，支援從商品上架、金物流串接到促銷活動設定等所有功能，協助你輕鬆在短時間內打造理想中的風格店面。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <div
+        class="row justify-content-between align-items-start dwFooter py-4 py-md-5"
+      >
+        <div class="col-12 col-lg-3 mb-3 mb-sm-4">
+          <img class="dwNavbar__logo" src="images/dw__logo.svg" alt="" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">服務項目</h3>
+          <div class="row justify-content-between">
+            <a
+              href="/works.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pr-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >案例分析</a
+            >
+            <a
+              href="/articles"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3 mb-3 mb-sm-0 mb-lg-4"
+              >隼思選讀</a
+            >
+            <a
+              href="/questions.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link px-sm-0 px-lg-3"
+              >常見問題</a
+            >
+            <a
+              href="/contact.html"
+              class="col-6 col-sm-auto col-lg-6 dwFooter__link pl-sm-0 px-lg-3"
+              >立即諮詢</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 pl-4 pl-lg-3">
+          <h3 class="font__size__16 mb-3 mb-lg-4 color__primary">聯絡資訊</h3>
+          <div class="row">
+            <p
+              class="col-12 col-lg-6 order-lg-1 font__size__14 color__secondary mb-lg-4"
+            >
+              02-2222-1929
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-3 font__size__14 color__secondary"
+            >
+              0910-338-721
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-2 font__size__14 color__secondary mb-lg-4 px-lg-0"
+            >
+              david.weng.android@gmail.com
+            </p>
+            <p
+              class="col-12 col-lg-6 order-lg-4 font__size__14 color__secondary mb-0 px-lg-0"
+            >
+              台北市松山區敦化北路153-10號
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3
+        class="font__size__14 font__weight__regular color__secondary text-center my-4 my-md-5"
+      >
+        © Copyright 2019. 隼思科技有限公司 Inc.
+      </h3>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/index.js"></script>
+    <script>
+      let list1 = document.querySelector(".list1");
+      let listTitle1 = list1.querySelector("h3");
+      let listIcon1 = list1.querySelector("img");
+      $("#list1").on("show.bs.collapse", () => {
+        list1.classList.add("dwQuestion__list--show");
+        listTitle1.classList.add("color__brand");
+        listIcon1.src = "images/dw__icon__up.svg";
+      });
+      $("#list1").on("hide.bs.collapse", () => {
+        list1.classList.remove("dwQuestion__list--show");
+        listTitle1.classList.remove("color__brand");
+        listIcon1.src = "images/dw__icon__down.svg";
+      });
+
+      let list2 = document.querySelector(".list2");
+      let listTitle2 = list2.querySelector("h3");
+      let listIcon2 = list2.querySelector("img");
+      $("#list2").on("show.bs.collapse", () => {
+        list2.classList.add("dwQuestion__list--show");
+        listTitle2.classList.add("color__brand");
+        listIcon2.src = "images/dw__icon__up.svg";
+      });
+      $("#list2").on("hide.bs.collapse", () => {
+        list2.classList.remove("dwQuestion__list--show");
+        listTitle2.classList.remove("color__brand");
+        listIcon2.src = "images/dw__icon__down.svg";
+      });
+    </script>
+  </body>
+</html>
